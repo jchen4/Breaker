@@ -8,10 +8,20 @@ import java.awt.Color;
 
 public class Ball
 {
-    public void paintComponent(Graphics g)
+    private Elipse2D.Double ball;
+    public Board()
     {
-        Graphics2D g2 = (Graphics2D) g;
+        ball = new Rectangle2D.Double(500, 850, 200, 25);
+    }
+    
+    public void draw(Graphics2D g2)
+    {
+        g2.draw(ball);
+    }
+    
+    public void updateLocation(int x)
+    {
+        rect.setRect(x - rect.getWidth()/2, 850, 200, 25);
         
     }
-
 }
