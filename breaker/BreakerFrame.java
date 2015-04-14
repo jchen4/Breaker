@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 public class BreakerFrame extends JFrame
 {
-    private BreakerComponent component;
+    private Board board;
     
     public class MotionListener implements MouseMotionListener
     {
@@ -12,8 +12,7 @@ public class BreakerFrame extends JFrame
         {
             int x = event.getX();
             int y = event.getY();
-            //updates board x value to mouse's x value
-            board.updateLocation(x);
+            board.updateLocation(x, y);
         }
         
         public void mouseDragged(MouseEvent event){}
@@ -21,11 +20,10 @@ public class BreakerFrame extends JFrame
     
     public BreakerFrame()
     {
-        component = new BreakerComponent();
+        board = new Board();
         this.setSize(1680, 1050);
-        this.add(component);
+        this.add(board);
         MouseMotionListener listener = new MotionListener();
-        MouseMotionListener listener2 = new MotionListener();
         board.addMouseMotionListener(listener);
     }
 
