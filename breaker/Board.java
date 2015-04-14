@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 import java.awt.event.*;
 import java.awt.geom.*;
 
-public class Board extends JPanel
+public class Board
 {
     private Rectangle2D.Double rect;
     public Board()
@@ -13,16 +13,9 @@ public class Board extends JPanel
         rect = new Rectangle2D.Double(500, 500, 200, 25);
     }
     
-    public void paintComponent(Graphics g)
+    public void draw(Graphics2D g2)
     {
-        super.paintComponent(g);
-        Graphics2D g2 = (Graphics2D) g;
         g2.draw(rect);
     }
     
-    public void updateLocation(int x, int y)
-    {
-        rect.setRect(x - rect.getWidth()/2, 500, 200, 25);
-        repaint();
-    }
 }
