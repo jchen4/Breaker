@@ -23,4 +23,9 @@ public class Board
         rect.setRect(x - rect.getWidth()/2, 850, 200, 25);
         
     }
+    
+    public Rectangle2D getBounds()
+    {
+        return rect.getBounds2D();
+    }
 }

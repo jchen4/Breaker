@@ -25,4 +25,10 @@ public class BreakerFrame extends JFrame
         MouseMotionListener listener = new MotionListener();
         component.addMouseMotionListener(listener);
     }
+    
+    public boolean checkBoardCollision()
+    {
+        return component.checkBoardCollision();
+    }
+    
 }

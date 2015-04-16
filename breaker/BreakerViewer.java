@@ -15,5 +15,13 @@ public class BreakerViewer
         JFrame frame = new BreakerFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+        while(true)
+        {
+            if(frame.checkBoardCollision() == true)
+            {
+                
+            }
+            frame.repaint();
+        }
     }
 }
