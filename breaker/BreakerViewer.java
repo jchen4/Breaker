@@ -12,14 +12,14 @@ public class BreakerViewer
 {
     public static void main(String[] args)
     {
-        JFrame frame = new BreakerFrame();
+        BreakerFrame frame = new BreakerFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         while(true)
         {
             if(frame.checkBoardCollision() == true)
             {
-                
+                frame.updateBallVelocity();
             }
             frame.repaint();
         }

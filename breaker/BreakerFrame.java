@@ -31,4 +31,8 @@ public class BreakerFrame extends JFrame
         return component.checkBoardCollision();
     }
     
+    public void updateBallVelocity()
+    {
+        component.updateBallVelocity();
+    }
 }

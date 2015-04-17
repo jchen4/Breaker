@@ -24,8 +24,14 @@ public class Board
         
     }
     
-    public Rectangle2D getBounds()
+    public double getX()
     {
-        return rect.getBounds2D();
+        return rect.getX();
     }
+    
+    public double getY()
+    {
+        return rect.getY();
+    }
+    
 }

@@ -25,12 +25,26 @@ public class BreakerComponent extends JPanel
     
     public boolean checkBoardCollision()
     {
-        if(ball.getBounds().intersects(board.getBounds()))
+        double boardX = board.getX();
+        double boardY = board.getY();
+        double ballX = ball.getX();
+        double ballY = ball.getY();
+        if(ball.getBounds().intersectsLine(boardX, boardY, boardX + 200, boardY))
         {
             return true;
         }
-        if(ball.getBounds().intersects
+        if(ball.getBounds().intersectsLine(0, 0, 1678, 0) ||
+            ball.getBounds().intersectsLine(0, 0, 0, 1048) || 
+            ball.getBounds().intersectsLine(1678, 0, 1678, 1048))
+        {
+            return true;
+        }
         
         return false;
+    }
+    
+    public void updateBallVelocity()
+    {
+        ball.updateVelocity();
     }
 }
