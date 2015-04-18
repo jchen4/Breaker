@@ -10,7 +10,7 @@ public class Board
     private Rectangle2D.Double rect;
     public Board()
     {
-        rect = new Rectangle2D.Double(500, 850, 200, 25);
+        rect = new Rectangle2D.Double(200, 700, 200, 25);
     }
     
     public void draw(Graphics2D g2)
@@ -20,8 +20,7 @@ public class Board
     
     public void updateLocation(int x)
     {
-        rect.setRect(x - rect.getWidth()/2, 850, 200, 25);
-        
+        rect.setRect(x - rect.getWidth()/2, 700, 200, 25);
     }
     
     public double getX()
@@ -33,5 +32,4 @@ public class Board
     {
         return rect.getY();
     }
-    
 }

@@ -17,10 +17,6 @@ public class BreakerViewer
         frame.setVisible(true);
         while(true)
         {
-            if(frame.checkBoardCollision() == true)
-            {
-                frame.updateBallVelocity();
-            }
             frame.repaint();
         }
     }

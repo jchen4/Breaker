@@ -10,43 +10,38 @@ import java.awt.Color;
 public class Ball
 {
     private Ellipse2D.Double ball;
-    private int angle;
     private int x = 350;
     private int y = 233;
-    private int XVel = 1;
-    private int YVel = 1;
+    private double XVel = 2;
+    private double YVel = 2;
     public Ball()
     {
         ball = new Ellipse2D.Double(x, y, 50, 50);
-        angle = 1;
     }
     
-    public void draw(Graphics2D g2)
+    public void draw(Graphics2D g2, double boardX, double boardY)
     {
+        
+        if(ball.getBounds().intersectsLine(boardX, boardY, boardX + 200, boardY)) //board
+        {
+            YVel *= -1;
+        }
+        if(ball.getY() <= 0) //top
+        {
+            YVel *= -1;
+        }
+        if (ball.getX() <= 0)  //left
+        {
+            XVel *= -1;
+        }
+        if (ball.getX() + 50 >= 1280) //right
+        {
+            XVel *= -1;
+        }
         x += XVel;
         y += YVel;
         ball.setFrame(x, y, 50, 50);
         g2.draw(ball);
-    }
-    
-    public void updateVelocity()
-    {
-        if(XVel >= 0 && YVel >= 0)
-        {
-            YVel *= -1;
-        }
-        else if(XVel <= 0 && YVel <= 0)
-        {
-            XVel *= -1;
-        }
-        else if(XVel >= 0 && YVel <= 0)
-        {
-            XVel *= -1;
-        }
-        else if(XVel <= 0 && YVel >= 0)
-        {
-            YVel *= -1;
-        }
     }
     
     public Rectangle2D getBounds()

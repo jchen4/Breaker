@@ -1,8 +1,4 @@
 #BlueJ class context
 comment0.params=
 comment0.target=BreakerFrame()
-comment1.params=
-comment1.target=boolean\ checkBoardCollision()
-comment2.params=
-comment2.target=void\ updateBallVelocity()
-numComments=3
+numComments=1
