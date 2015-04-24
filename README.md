@@ -6,11 +6,16 @@ breaker game capstone project
 >I used the basic framework of a viewer, frame, and component class. Some new concepts I used are break statements and different listeners.
 
 >ball bounce pseudocode:
+
   if ball hits board
+  
     calculate ratio of ball distance from paddle center to total center distance
+    
     find x with sin
+    
     find y with cos
-    reverse X
+    
+    reverse x
     
 >Instructions:
   run main method of viewer class
