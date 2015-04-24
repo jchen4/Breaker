@@ -32,4 +32,15 @@ public class Board
     {
         return rect.getY();
     }
+    
+    public Rectangle2D getBounds()
+    {
+        return rect.getBounds();
+    }
+    
+    public double getLength()
+    {
+        return rect.getWidth();
+    }
+    
 }

@@ -26,5 +26,8 @@ public class BreakerFrame extends JFrame
         component.addMouseMotionListener(listener);
     }
     
-    
+    public boolean getWin()
+    {
+        return component.getWin();
+    }
 }
