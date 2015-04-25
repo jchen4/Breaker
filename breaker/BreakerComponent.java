@@ -17,24 +17,7 @@ public class BreakerComponent extends JPanel
     private final double BX = 100;
     private final double BY = 50;
     private Brick[][] brickList = new Brick[9][3];
-    //MYSTERY
-    private boolean secret;
     
-    class KeyStrokeListener implements KeyListener
-    {
-        public void keyPressed(KeyEvent event) 
-        {
-            String key = KeyStroke.getKeyStrokeForEvent(event).toString().replace("pressed ", ""); 
-            if (key.equals("DOWN"))
-            {
-                secret = true;
-            }
-        }
-
-        public void keyTyped(KeyEvent event) {}
-
-        public void keyReleased(KeyEvent event) {}
-    }
     
     public BreakerComponent()
     {
@@ -51,8 +34,6 @@ public class BreakerComponent extends JPanel
             ctY = 0;
             ctX += 1;
         }
-        this.addKeyListener(new KeyStrokeListener());
-        secret = true;
     }
     
 
@@ -82,16 +63,7 @@ public class BreakerComponent extends JPanel
             for (int j = 0; j < brickList[0].length; j++)
             {
                 if(brickList[i][j] != null)
-                if(secret == true
-                && (ball.getBounds().intersectsLine(brickList[i][j].getSideL()) 
-                || ball.getBounds().intersectsLine(brickList[i][j].getSideB())
-                || ball.getBounds().intersectsLine(brickList[i][j].getSideR())
-                || ball.getBounds().intersectsLine(brickList[i][j].getSideT())))
-                {
-                    brickList[i][j] = null;
-                    break loop;
-                }
-                else if (ball.getX() + 50 >= 1280)
+                if (ball.getX() + 50 >= 1280)
                 {
                     ball.setX(1250);
                     ball.revX();
