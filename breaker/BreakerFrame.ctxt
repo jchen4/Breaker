@@ -2,5 +2,6 @@
 comment0.params=
 comment0.target=BreakerFrame()
 comment1.params=
-comment1.target=boolean\ getWin()
+comment1.target=int\ getWin()
+comment1.text=\r\n\ Checks\ if\ game\ won\ or\ lost\r\n\ \r\n\ @return\ \ won\ or\ lost,\ 0\ \=\ neither,\ 1\ \=\ won,\ 2\ \=\ lost\r\n
 numComments=2

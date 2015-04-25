@@ -3,8 +3,11 @@ comment0.params=
 comment0.target=BreakerComponent()
 comment1.params=g
 comment1.target=void\ paintComponent(java.awt.Graphics)
+comment1.text=\r\n\ draws\ all\ objects\ and\ chacks\ and\ handles\ collisions\r\n\ \r\n\ @param\ \ \ g\ \ \ graphics\ object\r\n
 comment2.params=x
 comment2.target=void\ updateBoardLocation(int)
+comment2.text=\r\n\ Tells\ board\ to\ update\ location\r\n\ \r\n\ @param\ \ \ x\ \ \ board\ x\ location\ to\ move\ to\r\n
 comment3.params=
-comment3.target=boolean\ getWin()
+comment3.target=int\ getWin()
+comment3.text=\r\n\ Checks\ if\ game\ won\ or\ lost\r\n\ \r\n\ @return\ \ won\ or\ lost,\ 0\ \=\ neither,\ 1\ \=\ won,\ 2\ \=\ lost\r\n
 numComments=4

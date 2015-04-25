@@ -15,10 +15,18 @@ public class BreakerViewer
         BreakerFrame frame = new BreakerFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        while(frame.getWin() != true)
+        while(frame.getWin() == 0)
         {
             frame.repaint();
         }
-        JOptionPane.showMessageDialog ( null, "YA WON" ); 
+        //win condition
+        if (frame.getWin() == 1)
+        {
+            JOptionPane.showMessageDialog ( null, "You Win" );
+        }
+        else if(frame.getWin() == 2)//lose condition
+        {
+            JOptionPane.showMessageDialog ( null, "You Lost" ); 
+        }
     }
 }

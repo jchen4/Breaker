@@ -8,6 +8,11 @@ public class BreakerFrame extends JFrame
     
     public class MotionListener implements MouseMotionListener
     {
+        /*
+         * Updates board location based on mouse location
+         * 
+         * @param   mouse event
+         */
         public void mouseMoved(MouseEvent event)
         {
             int x = event.getX();
@@ -26,7 +31,12 @@ public class BreakerFrame extends JFrame
         component.addMouseMotionListener(listener);
     }
     
-    public boolean getWin()
+    /*
+     * Checks if game won or lost
+     * 
+     * @return  won or lost, 0 = neither, 1 = won, 2 = lost
+     */
+    public int getWin()
     {
         return component.getWin();
     }

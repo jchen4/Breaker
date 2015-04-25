@@ -1,16 +1,14 @@
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import javax.swing.JPanel;
-import javax.swing.JFrame;
 import java.awt.event.*;
 import java.awt.geom.*;
 
 public class Brick
 {
-   private Rectangle2D.Double brick;
    private Line2D.Double top, left, right, bot;
-   private Line2D.Double[] lineList;
+   //length of brick
    private final double BX = 100;
+   //height of brick
    private final double BY = 50;
    public Brick(int x, int y)
    {
@@ -20,6 +18,11 @@ public class Brick
        bot = new Line2D.Double(x, y+BY, x+BX, y+BY);
    }
    
+   /*
+    * Draws all 4 lines of brick
+    * 
+    * @param    graphics object
+    */
    public void draw(Graphics2D g2)
    {
        g2.draw(top);
@@ -28,21 +31,41 @@ public class Brick
        g2.draw(bot);
    }
    
+   /*
+    * Gets top side
+    * 
+    * @return   top side as line
+    */
    public Line2D.Double getSideT()
    {
        return top;
    }
    
+   /*
+    * Gets bottom side
+    * 
+    * @return   bottom side as line
+    */
    public Line2D.Double getSideB()
    {
        return bot;
    }
    
+   /*
+    * Gets left side
+    * 
+    * @return   left side as line
+    */
    public Line2D.Double getSideL()
    {
        return left;
    }
    
+   /*
+    * Gets right side
+    * 
+    * @return   right side as line
+    */
    public Line2D.Double getSideR()
    {
        return right;
